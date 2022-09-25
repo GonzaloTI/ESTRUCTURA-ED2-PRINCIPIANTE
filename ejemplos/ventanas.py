@@ -4,7 +4,7 @@ from tkinter import *
 class Ventana(object):
     # Metodo que instancia la clase Ventana e inicializa el modo grafico
     def __init__(self,master):
-        self.master = master ''' Instancias de Widget sobre lo que se va pintar'''
+        self.master = master #Instancias de Widget sobre lo que se va pintar
         self.inicializar_gui()
         self.lienzo = Canvas(self.master,width=100,height=100) # Canvas objeto que permite pintar
     # creamos los widget dentro del canvas       
