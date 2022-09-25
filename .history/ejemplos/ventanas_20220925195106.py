@@ -11,7 +11,7 @@ class Ventana(object):
     # creamos los widget dentro del canvas       
     def inicializar_gui(self):
         Button(self.master,text='Dibujar',command=lambda: self.rectangulo()).pack()
-        self.crear_menu()
+        self.crear_menu(self)
     def crear_menu(self):
         self.miMenu = Menu(self.master)
         self.barraMenu = Menu(self.miMenu, tearoff=0)

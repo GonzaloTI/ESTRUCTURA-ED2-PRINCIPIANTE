@@ -11,14 +11,12 @@ class Ventana(object):
     # creamos los widget dentro del canvas       
     def inicializar_gui(self):
         Button(self.master,text='Dibujar',command=lambda: self.rectangulo()).pack()
-        self.crear_menu()
-    def crear_menu(self):
-        self.miMenu = Menu(self.master)
-        self.barraMenu = Menu(self.miMenu, tearoff=0)
+        self.miMenu = self.master.Menu(self.master)
+        self.barraMenu = self.master.Menu(self.miMenu, tearoff=0)
         self.barraMenu.add_command(label='Abrir')
         self.miMenu.add_cascade(label='Archivo',menu=self.barraMenu)
         self.master.config(menu=self.miMenu)
-            
+        
     def rectangulo(self):
         self.lienzo.pack(expand=YES,fill=BOTH)
         self.lienzo.create_rectangle(10,10,100,100,width=5,fill='red')
